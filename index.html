@@ -46,7 +46,7 @@
             font-weight: bold;
             border-radius: 5px;
         }
-        .image {
+        .image, .instructor img, .reviews img {
             display: block;
             max-width: 100%;
             margin: 20px auto;
@@ -54,9 +54,6 @@
         }
         .info-section, .faq, .reviews {
             margin-bottom: 40px;
-        }
-        .faq-item {
-            margin-bottom: 20px;
         }
         .highlight {
             background: #fbe9e7;
@@ -81,10 +78,6 @@
         .instructor {
             text-align: center;
             margin-top: 40px;
-        }
-        .instructor img {
-            max-width: 200px;
-            border-radius: 50%;
         }
         .sticky-footer {
             position: fixed;
@@ -111,24 +104,6 @@
             margin-bottom: 8px;
             font-size: 1em;
         }
-        .video-container {
-            position: relative;
-            padding-bottom: 56.25%;
-            height: 0;
-            overflow: hidden;
-            max-width: 100%;
-            margin: 30px auto;
-            border-radius: 10px;
-        }
-        .video-container iframe {
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            border: 0;
-            border-radius: 10px;
-        }
         @media (max-width: 768px) {
             .sticky-footer {
                 display: block;
@@ -148,6 +123,9 @@
 <div class="container">
     <h1>Learn Salsa in 4 Weeks</h1>
     <h2 class="subhead">Fun, beginner-friendly course in Spokane. No partner or experience needed!</h2>
+
+    <div class="countdown" id="countdown">Limited spots available — next session starts soon!</div>
+
     <a class="cta-button" href="https://www.paypal.com/ncp/payment/K6BN56B7AWH4J" onclick="posthog.capture('buy_now_clicked')">Reserve Your Spot for $79</a>
 
     <ul class="quick-benefits">
@@ -159,8 +137,55 @@
 
     <img class="image" src="https://www.bailasociety.com/wp-content/uploads/2023/04/44582969_10155584280441277_7578102402289500160_n-e1681266527548.jpg" alt="Salsa Class Photo">
 
-    <div class="video-container">
-        <iframe src="https://www.youtube.com/embed/YbWrD_CkCUI?rel=0" title="Salsa Class Preview" allowfullscreen></iframe>
+    <div class="highlight">
+        📍 Location: 1403 S Assembly St, Spokane, WA 99224
     </div>
 
-<!-- rest of the content remains unchanged -->
+    <iframe class="map" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2792.3854295226437!2d-117.48731382376473!3d47.63800327119279!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x549e1b9f23952bb3%3A0xe2ae94c2d5db3d8f!2s1403%20S%20Assembly%20St%2C%20Spokane%2C%20WA%2099224!5e0!3m2!1sen!2sus!4v1683219620504!5m2!1sen!2sus" allowfullscreen="" loading="lazy"></iframe>
+
+    <div class="instructor">
+        <h3>Meet Your Instructor: Esteban</h3>
+        <img src="https://raw.githubusercontent.com/CasaDeLaSalsa/salsa-landing-page/main/Esteban%20pic1.JPG" alt="Instructor Esteban">
+        <p>Esteban has been dancing for over 30 years. He began dancing at the age of 15 and has been teaching salsa and bachata for the past decade in California. His passion is getting people excited about dancing in Spokane! You’ll love his warm and enthusiastic teaching style.</p>
+    </div>
+
+    <div class="reviews">
+        <h3>What People Are Saying</h3>
+        <img src="https://raw.githubusercontent.com/CasaDeLaSalsa/salsa-landing-page/main/reviews.jpg" alt="Reviews">
+    </div>
+
+    <div class="faq">
+        <h3>Questions?</h3>
+        <p>Email us at <a href="mailto:casadelasalsa2@gmail.com">casadelasalsa2@gmail.com</a> or call/text <a href="tel:5098180495">509-818-0495</a>. We’d love to hear from you!</p>
+    </div>
+
+    <a class="cta-button" href="https://www.paypal.com/ncp/payment/K6BN56B7AWH4J" onclick="posthog.capture('buy_now_clicked')">Join the Fun for $79</a>
+</div>
+
+<div class="sticky-footer">
+    <a href="https://www.paypal.com/ncp/payment/K6BN56B7AWH4J" onclick="posthog.capture('buy_now_clicked')">Sign Up – Only $79</a>
+</div>
+
+<script>
+// Countdown Timer Script
+const countdown = document.getElementById("countdown");
+const eventDate = new Date();
+eventDate.setDate(eventDate.getDate() + 5); // 5 days from now
+const timer = setInterval(() => {
+    const now = new Date();
+    const diff = eventDate - now;
+    if (diff <= 0) {
+        clearInterval(timer);
+        countdown.textContent = "Enrollment closes soon!";
+        return;
+    }
+    const days = Math.floor(diff / (1000 * 60 * 60 * 24));
+    const hours = Math.floor((diff / (1000 * 60 * 60)) % 24);
+    const minutes = Math.floor((diff / 1000 / 60) % 60);
+    const seconds = Math.floor((diff / 1000) % 60);
+    countdown.textContent = `⏳ Only ${days}d ${hours}h ${minutes}m ${seconds}s left to sign up!`;
+}, 1000);
+</script>
+
+</body>
+</html>
