@@ -19,6 +19,20 @@
 
   gtag('config', 'G-YCQZSZGCPX');
 </script>
+<script>
+  document.addEventListener('DOMContentLoaded', function () {
+    var paypalButton = document.querySelector('a[href*="paypal.com"]');
+    if (paypalButton) {
+      paypalButton.addEventListener('click', function () {
+        gtag('event', 'paypal_click', {
+          'event_category': 'engagement',
+          'event_label': 'PayPal Button Clicked'
+        });
+      });
+    }
+  });
+</script>
+
   
     <style>
         body {
