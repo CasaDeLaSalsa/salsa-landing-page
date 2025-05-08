@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Learn Salsa in Spokane - 4-Week Beginner Course</title>
+    <meta name="description" content="Learn salsa in Spokane with a fun, friendly 4-week beginner course. No partner needed. Taught by expert instructor Esteban. Only $79!">
+    <meta property="og:title" content="Learn Salsa in Spokane - Beginner Course">
+    <meta property="og:description" content="4-week salsa course for beginners in Spokane. No partner needed. Fun, easy instruction by Esteban.">
+    <meta property="og:image" content="https://www.bailasociety.com/wp-content/uploads/2023/04/44582969_10155584280441277_7578102402289500160_n-e1681266527548.jpg">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Montserrat', sans-serif;
+            margin: 0;
+            padding: 0;
+            background: #fff;
+            color: #222;
+            line-height: 1.6;
+        }
+        .container {
+            max-width: 900px;
+            margin: auto;
+            padding: 20px;
+        }
+        h1, h2, h3 {
+            text-align: center;
+        }
+        .cta-button {
+            display: block;
+            text-align: center;
+            background-color: #d62828;
+            color: white;
+            padding: 15px;
+            margin: 20px auto;
+            width: 80%;
+            max-width: 400px;
+            text-decoration: none;
+            font-weight: bold;
+            border-radius: 5px;
+        }
+        .image, .instructor img, .reviews img {
+            display: block;
+            max-width: 100%;
+            margin: 20px auto;
+            border-radius: 10px;
+        }
+        .quick-benefits {
+            list-style: none;
+            padding: 0;
+            max-width: 500px;
+            margin: 10px auto 20px;
+        }
+        .quick-benefits li {
+            text-align: center;
+            margin-bottom: 8px;
+            font-size: 1em;
+        }
+        .highlight {
+            background: #fbe9e7;
+            padding: 10px;
+            border-left: 5px solid #d62828;
+            margin: 20px 0;
+        }
+        .map {
+            display: block;
+            margin: 20px auto;
+            border: 0;
+            width: 100%;
+            height: 300px;
+            border-radius: 10px;
+        }
+        .countdown {
+            text-align: center;
+            font-size: 1.2em;
+            color: #d62828;
+            font-weight: bold;
+        }
+        .sticky-footer {
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+            background: #d62828;
+            text-align: center;
+            padding: 15px;
+            display: none;
+        }
+        .sticky-footer a {
+            color: white;
+            font-weight: bold;
+            text-decoration: none;
+        }
+        @media (max-width: 768px) {
+            .sticky-footer {
+                display: block;
+            }
+        }
+
+        .carousel-container {
+            max-width: 700px;
+            margin: 40px auto;
+            position: relative;
+            overflow: hidden;
+            border-radius: 15px;
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+            background: white;
+        }
+
+        .carousel-track {
+            display: flex;
+            transition: transform 0.4s ease-in-out;
+        }
+
+        .carousel-item {
+            min-width: 100%;
+            box-sizing: border-box;
+            padding: 30px 25px;
+            background: #fff;
+            text-align: left;
+            line-height: 1.6;
+            color: #333;
+        }
+
+        .carousel-item strong {
+            display: block;
+            margin-bottom: 10px;
+            font-size: 1.1em;
+            color: #d62828;
+        }
+
+        .carousel-buttons {
+            text-align: center;
+            margin-top: 15px;
+        }
+
+        .carousel-buttons button {
+            background: #d62828;
+            color: white;
+            border: none;
+            padding: 10px 18px;
+            margin: 0 8px;
+            border-radius: 8px;
+            font-size: 1.1em;
+            cursor: pointer;
+            transition: background 0.3s;
+        }
+
+        .carousel-buttons button:hover {
+            background: #a61d1d;
+        }
+    </style>
+</head>
+<body>
+<div class="container">
+    <h1>Learn Salsa in 4 Weeks</h1>
+    <h2 class="subhead">Spokane’s favorite salsa instructor will get you dancing — no partner needed!</h2>
+
+    <div class="instructor">
+        <img src="https://raw.githubusercontent.com/CasaDeLaSalsa/salsa-landing-page/main/Esteban%20pic1.JPG" alt="Instructor Esteban">
+        <p>Esteban has been dancing for over 30 years and is known for his warm and friendly teaching style.</p>
+    </div>
+
+    <div class="reviews">
+        <h3>What People Are Saying</h3>
+        <div class="carousel-container">
+            <div class="carousel-track" id="carouselTrack">
+                <div class="carousel-item">
+                    <strong>Review from Amy Troutt</strong>
+                    Such a fun and welcoming salsa class! The instructor was fantastic—clear, patient, and full of great energy. Even moves that looked intimidating at first were broken down in a way that made them easy to learn. Loved that I never felt embarrassed to ask questions, and the community was so warm and inclusive. Left feeling energized and excited to keep dancing! Highly recommend for anyone, whether you're new or experienced.
+                </div>
+                <div class="carousel-item">
+                    <strong>Review from Lawrence Paul-Okoh</strong>
+                    What a great experience! Going to their social events is a lot of fun. Private lessons are absolutely worth it—can't recommend enough!
+                </div>
+                <div class="carousel-item">
+                    <strong>Review from The Personal Drivers Team</strong>
+                    Good place to have fun and learn a new skill. No pressure!
+                </div>
+            </div>
+            <div class="carousel-buttons">
+                <button onclick="moveCarousel(-1)">&larr;</button>
+                <button onclick="moveCarousel(1)">&rarr;</button>
+            </div>
+        </div>
+    </div>
+
+    <ul class="quick-benefits">
+        <li>✅ 4 Weekly Salsa Classes</li>
+        <li>✅ No Partner or Experience Needed</li>
+        <li>✅ Friendly Step-by-Step Instruction</li>
+        <li>✅ Bonus Social Dance Night</li>
+    </ul>
+
+    <a class="cta-button" href="https://www.paypal.com/ncp/payment/K6BN56B7AWH4J">Join the Fun for $79</a>
+
+    <div class="countdown" id="countdown">Limited spots available — next session starts soon!</div>
+
+    <div class="highlight">
+        📍 Location: 1403 S Assembly St, Spokane, WA 99224
+    </div>
+
+    <iframe class="map" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2792.3854295226437!2d-117.48731382376473!3d47.63800327119279!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x549e1b9f23952bb3%3A0xe2ae94c2d5db3d8f!2s1403%20S%20Assembly%20St%2C%20Spokane%2C%20WA%2099224!5e0!3m2!1sen!2sus!4v1683219620504!5m2!1sen!2sus" allowfullscreen="" loading="lazy"></iframe>
+
+    <div class="faq">
+        <h3>Questions?</h3>
+        <p>Email us at <a href="mailto:casadelasalsa2@gmail.com">casadelasalsa2@gmail.com</a> or call/text <a href="tel:5098180495">509-818-0495</a>. We’d love to hear from you!</p>
+    </div>
+
+    <a class="cta-button" href="https://www.paypal.com/ncp/payment/K6BN56B7AWH4J">Reserve Your Spot Now</a>
+</div>
+
+<div class="sticky-footer">
+    <a href="https://www.paypal.com/ncp/payment/K6BN56B7AWH4J">Sign Up – Only $79</a>
+</div>
+
+<script>
+const countdown = document.getElementById("countdown");
+const eventDate = new Date();
+eventDate.setDate(eventDate.getDate() + 5);
+const timer = setInterval(() => {
+    const now = new Date();
+    const diff = eventDate - now;
+    if (diff <= 0) {
+        clearInterval(timer);
+        countdown.textContent = "Enrollment closes soon!";
+        return;
+    }
+    const days = Math.floor(diff / (1000 * 60 * 60 * 24));
+    const hours = Math.floor((diff / (1000 * 60 * 60)) % 24);
+    const minutes = Math.floor((diff / 1000 / 60) % 60);
+    const seconds = Math.floor((diff / 1000) % 60);
+    countdown.textContent = `⏳ Only ${days}d ${hours}h ${minutes}m ${seconds}s left to sign up!`;
+}, 1000);
+
+let carouselIndex = 0;
+const track = document.getElementById('carouselTrack');
+const items = track.children;
+function moveCarousel(direction) {
+    carouselIndex += direction;
+    if (carouselIndex < 0) carouselIndex = items.length - 1;
+    if (carouselIndex >= items.length) carouselIndex = 0;
+    track.style.transform = `translateX(-${carouselIndex * 100}%)`;
+}
+</script>
+</body>
+</html>
